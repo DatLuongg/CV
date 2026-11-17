@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CV - Lương Đạt | Tân Sinh Viên CNTT HCMUE</title>
+  <!-- Google Fonts hỗ trợ đầy đủ tiếng Việt -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:ital,wght@0,400;0,500;0,600;0,700;0,800;1,700&family=Dancing+Script:wght@700&family=Oswald:wght@600;700&display=swap"
+    rel="stylesheet"
+  />
+  <!-- Liên kết file CSS ngoài -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="cv-container">
+    <div>
+      <!-- HEADER -->
+      <header class="cv-header">
+        <div class="avatar-wrapper">
+          <img
+            src="avatar.jpg"
+            alt="Ảnh chân dung Lương Đạt"
+            onerror="this.style.display='none'; this.parentElement.innerHTML='<span class=\'avatar-placeholder\'>Đặt file ảnh <b>avatar.jpg</b><br>cùng thư mục với file HTML</span>';"
+          />
+        </div>
+
+        <div class="title-block">
+          <div class="last-name">LƯƠNG ĐÌNH THÀNH</div>
+          <div class="first-name">ĐẠT</div>
+          <div class="subtitle">TÂN SINH VIÊN CNTT HCMUE</div>
+        </div>
+      </header>
+
+      <!-- CONTACT BAR (CÓ KHUNG ẢNH CHO GMAIL, ZALO, FACEBOOK) -->
+      <section class="contact-bar" aria-label="Thông tin liên hệ">
+        <div class="contact-item">
+          <div class="contact-icon">
+            <img
+              src="gmail.png"
+              alt="Logo Gmail"
+              onerror="this.style.display='none'; this.parentElement.classList.add('empty-icon'); this.parentElement.innerText='IMG';"
+            />
+          </div>
+          <div class="contact-info">
+            <h3>Email</h3>
+            <p>
+              <a href="mailto:datluongdinhthanh585@gmail.com">
+                datluongdinhthanh585@gmail.com
+              </a>
+            </p>
+          </div>
+        </div>
+
+        <div class="contact-item">
+          <div class="contact-icon">
+            <img
+              src="zalo.png"
+              alt="Logo Zalo"
+              onerror="this.style.display='none'; this.parentElement.classList.add('empty-icon'); this.parentElement.innerText='IMG';"
+            />
+          </div>
+          <div class="contact-info">
+            <h3>Zalo</h3>
+            <p><a href="tel:0368015432">0368015432</a></p>
+          </div>
+        </div>
+
+        <div class="contact-item">
+          <div class="contact-icon">
+            <img
+              src="facebook.png"
+              alt="Logo Facebook"
+              onerror="this.style.display='none'; this.parentElement.classList.add('empty-icon'); this.parentElement.innerText='IMG';"
+            />
+          </div>
+          <div class="contact-info">
+            <h3>Facebook</h3>
+            <p>
+              <a
+                href="https://www.facebook.com/atluong.708266"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Đạt Lương
+              </a>
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- MAIN 2-COLUMN CONTENT -->
+      <section class="cv-body">
+        <!-- CỘT TRÁI -->
+        <div class="cv-column">
+          <div>
+            <h2 class="section-title">ĐÔI CHÚT VỀ BẢN THÂN</h2>
+            <ul class="cv-list">
+              <li>
+                <strong>
+                  Mình là Lương Đình Thành Đạt, là sinh viên năm nhất ngành Công nghệ thông tin trường Đại học Sư Phạm TPHCM K52 (2026 - 2030).
+                </strong>
+              </li>
+            </ul>
+          </div>
+
+          <div>
+            <h2 class="section-title">NGƯỜI THAM CHIẾU</h2>
+            <ul class="cv-list">
+              <li>
+                <strong>
+                  Thầy Lương Trần Hy Hiến - giảng viên môn Thiết kế web
+                </strong>
+              </li>
+            </ul>
+          </div>
+
+          <!-- PHẦN KĨ NĂNG -->
+          <div class="skills-section">
+            <h2 class="section-title">KĨ NĂNG</h2>
+            <div class="skill-list">
+              <div class="skill-item">
+                <span class="skill-name">C++</span>
+                <div class="progress-bar">
+                  <div class="progress-fill progress-cpp"></div>
+                </div>
+              </div>
+
+              <div class="skill-item">
+                <span class="skill-name">HTML</span>
+                <div class="progress-bar">
+                  <div class="progress-fill progress-html"></div>
+                </div>
+              </div>
+
+              <div class="skill-item">
+                <span class="skill-name">CSS</span>
+                <div class="progress-bar">
+                  <div class="progress-fill progress-css"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- CỘT PHẢI -->
+        <div class="cv-column">
+          <div>
+            <h2 class="section-title">THÀNH TÍCH HỌC THUẬT</h2>
+            <ul class="cv-list">
+              <li>Giải ba kì thi Olympic tháng tư 2025</li>
+              <li>Giải khuyến khích kì thi tin học trẻ HCM 2025 bảng C2</li>
+              <li>
+                Thành viên đội tuyển tin học trẻ HCM tham dự vòng loại hội thi
+                tin học trẻ quốc gia
+              </li>
+              <li>Giải khuyến khích kì thi tin học trẻ Miền Nam 2025</li>
+              <li>Max Rating Codeforces 1458</li>
+            </ul>
+          </div>
+
+          <div>
+            <h2 class="section-title">CÔNG VIỆC</h2>
+            <ul class="cv-list">
+              <li>
+                DẠY HỌC SINH GIỎI CẤP TỈNH, THÀNH PHỐ
+              </li>
+              <li>
+                TUYỂN SINH 10 CHUYÊN VÀ OLYMPIC HỒ CHÍ MINH
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <!-- FOOTER -->
+    <footer class="cv-footer">
+      <div class="footer-heading">INFORMATION</div>
+      <div class="footer-link-wrap">
+        • FACEBOOK:
+        <a
+          href="https://www.facebook.com/atluong.708266"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          HTTPS://WWW.FACEBOOK.COM/ATLUONG.708266
+        </a>
+      </div>
+    </footer>
+  </main>
+</body>
+</html>
