@@ -2,7 +2,7 @@
   --bg-cream: #f4efe6;
   --bg-strip: #faf7f2;
   --accent-taupe: #8c735b;
-  --track-bg: #ddd4c6;
+  --accent-dark: #6f5944;
   --text-dark: #262524;
   --text-muted: #3d3b39;
 }
@@ -23,7 +23,7 @@ body {
   line-height: 1.5;
 }
 
-/* Khung trang A4 */
+/* Frame A4 */
 .cv-container {
   width: 100%;
   max-width: 820px;
@@ -36,7 +36,7 @@ body {
   padding-bottom: 24px;
 }
 
-/* Phần Header: Ảnh + Tên + Chức danh */
+/* header */
 .cv-header {
   display: flex;
   align-items: center;
@@ -46,14 +46,20 @@ body {
 
 .avatar-wrapper {
   flex-shrink: 0;
-  width: 265px;
-  height: 325px;
+  width: 260px;
+  height: 320px;
   border: 2px solid var(--accent-taupe);
   background-color: #e6dfd3;
   overflow: hidden;
   display: flex;
   align-items: center;
   justify-content: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.avatar-wrapper:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 22px rgba(140, 115, 91, 0.22);
 }
 
 .avatar-wrapper img {
@@ -78,53 +84,68 @@ body {
   align-items: center;
 }
 
-.last-name {
+.full-name-stack {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  user-select: none;
+}
+
+.name-line {
   font-family: 'Oswald', sans-serif;
   font-weight: 700;
-  font-size: 6.4rem;
-  line-height: 0.92;
+  font-size: 4.35rem;
+  line-height: 0.94;
   color: var(--accent-taupe);
   letter-spacing: 2px;
   text-transform: uppercase;
-  user-select: none;
 }
 
 .first-name {
   font-family: 'Dancing Script', cursive;
   font-weight: 700;
-  font-size: 5.8rem;
+  font-size: 4.8rem;
   line-height: 0.85;
   color: var(--text-dark);
-  margin-top: -22px;
-  margin-left: 48px;
+  margin-top: -16px;
+  margin-left: 64px;
   transform: rotate(-4deg);
 }
 
 .subtitle {
-  margin-top: 26px;
-  font-size: 1.25rem;
+  margin-top: 22px;
+  font-size: 1.2rem;
   font-weight: 700;
   letter-spacing: 0.8px;
   color: var(--text-dark);
   text-transform: uppercase;
 }
 
-/* Thanh thông tin liên hệ */
+/* COntent bar media */
 .contact-bar {
   background-color: var(--bg-strip);
-  padding: 18px 44px;
+  padding: 16px 44px;
   display: grid;
-  grid-template-columns: 1.4fr 0.8fr 0.8fr;
-  gap: 18px;
+  grid-template-columns: 1.55fr 0.72fr 0.73fr;
+  gap: 14px;
 }
 
 .contact-item {
   display: flex;
   align-items: center;
   gap: 12px;
+  padding: 6px 8px;
+  border-radius: 10px;
+  text-decoration: none;
+  color: inherit;
+  transition: background-color 0.25s ease, transform 0.25s ease;
 }
 
-/* Khung ảnh cho Gmail, Zalo, Facebook */
+.contact-item:hover {
+  background-color: rgba(140, 115, 91, 0.1);
+  transform: translateY(-2px);
+}
+
 .contact-icon {
   flex-shrink: 0;
   width: 42px;
@@ -136,6 +157,12 @@ body {
   align-items: center;
   justify-content: center;
   overflow: hidden;
+  transition: border-color 0.25s ease, box-shadow 0.25s ease;
+}
+
+.contact-item:hover .contact-icon {
+  border-color: var(--accent-dark);
+  box-shadow: 0 4px 10px rgba(140, 115, 91, 0.2);
 }
 
 .contact-icon img {
@@ -160,22 +187,19 @@ body {
   margin-bottom: 2px;
 }
 
-.contact-info p,
-.contact-info a {
-  font-size: 0.96rem;
+.contact-info p {
+  font-size: 0.91rem;
   color: var(--text-muted);
-  text-decoration: none;
   word-break: break-word;
 }
 
-.contact-info a:hover {
-  color: var(--accent-taupe);
-  text-decoration: underline;
+.contact-item:hover .contact-info p {
+  color: var(--accent-dark);
 }
 
-/* Nội dung chính 2 cột */
+/* Content two column */
 .cv-body {
-  padding: 28px 44px 16px;
+  padding: 26px 44px 16px;
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 28px 44px;
@@ -185,18 +209,18 @@ body {
 .cv-column {
   display: flex;
   flex-direction: column;
-  gap: 26px;
+  gap: 24px;
 }
 
 .section-title {
   display: inline-block;
-  font-size: 1.35rem;
+  font-size: 1.3rem;
   font-weight: 700;
   color: var(--accent-taupe);
   text-transform: uppercase;
   border-bottom: 2px solid var(--accent-taupe);
   padding-bottom: 2px;
-  margin-bottom: 14px;
+  margin-bottom: 12px;
   letter-spacing: 0.5px;
 }
 
@@ -205,11 +229,11 @@ body {
   padding-left: 20px;
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 9px;
 }
 
 .cv-list li {
-  font-size: 1.02rem;
+  font-size: 1rem;
   color: var(--text-dark);
   line-height: 1.48;
 }
@@ -218,53 +242,30 @@ body {
   font-weight: 700;
 }
 
-/* Phần Kĩ năng & Thanh tiến trình */
-.skill-list {
-  display: flex;
-  flex-direction: column;
-  gap: 14px;
+.sub-detail {
+  display: block;
+  font-size: 0.94rem;
+  color: var(--text-muted);
+  margin-top: 2px;
 }
 
-.skill-item {
-  display: flex;
-  flex-direction: column;
-  gap: 6px;
+
+
+.bottom-photo-wrapper:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 22px rgba(140, 115, 91, 0.22);
 }
 
-.skill-name {
-  font-size: 1.02rem;
-  font-weight: 600;
-  color: var(--text-dark);
-}
-
-.progress-bar {
+.bottom-photo-wrapper img {
+  position: absolute;
+  inset: 0;
   width: 100%;
-  height: 9px;
-  background-color: var(--track-bg);
-  border-radius: 999px;
-  overflow: hidden;
-}
-
-.progress-fill {
   height: 100%;
-  background-color: var(--accent-taupe);
-  border-radius: 999px;
+  object-fit: cover;
+  display: block;
 }
 
-/* Thông số mức độ từng kĩ năng */
-.progress-cpp {
-  width: 55%;
-}
-
-.progress-html {
-  width: 50%;
-}
-
-.progress-css {
-  width: 50%;
-}
-
-/* Footer */
+/* footer */
 .cv-footer {
   padding: 16px 44px 0;
   text-align: center;
@@ -280,24 +281,33 @@ body {
   color: var(--text-dark);
 }
 
-.footer-link-wrap {
-  font-size: 0.92rem;
+.footer-links {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 6px 24px;
+  font-size: 0.9rem;
   font-weight: 700;
   font-style: italic;
   color: var(--text-dark);
 }
 
-.footer-link-wrap a {
-  color: inherit;
-  text-decoration: none;
+.footer-links-sub {
+  margin-top: 4px;
 }
 
-.footer-link-wrap a:hover {
+.footer-links a {
+  color: inherit;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.footer-links a:hover {
   text-decoration: underline;
   color: var(--accent-taupe);
 }
 
-/* Responsive trên điện thoại */
+/* Responsive on phone */
 @media (max-width: 720px) {
   .cv-header {
     flex-direction: column;
@@ -310,19 +320,19 @@ body {
     height: 270px;
   }
 
-  .last-name {
-    font-size: 4.8rem;
+  .name-line {
+    font-size: 3.5rem;
   }
 
   .first-name {
-    font-size: 4.4rem;
-    margin-left: 30px;
+    font-size: 3.8rem;
+    margin-left: 44px;
   }
 
   .contact-bar {
     grid-template-columns: 1fr;
     padding: 16px 24px;
-    gap: 14px;
+    gap: 10px;
   }
 
   .cv-body {
@@ -330,12 +340,15 @@ body {
     padding: 24px;
   }
 
+  .bottom-photo-wrapper {
+    min-height: 260px;
+  }
+
   .cv-footer {
     padding: 16px 24px 0;
   }
 }
 
-/* Tối ưu khi xuất ra PDF / In ấn */
 @media print {
   body {
     background: none;
